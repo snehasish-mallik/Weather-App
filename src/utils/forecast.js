@@ -14,7 +14,19 @@ const forecast= (place, callback)=>{
         }
     
         else{
-            callback("The temprature is " +response.body.current.temp_c+ " degree Celcius with a "+response.body.current.condition.text) 
+            callback(
+
+                  "It is currently " +
+                  response.body.current.temperature +
+                  " degrees.\nIt feels like " +
+                  response.body.current.feelslike_c +
+                  " degrees.\nThere is " +
+                  response.body.current.precip_mm +
+                  "% chance of rain.\nThe Sky is: " +
+                  response.body.current.condition.text +
+                  "."
+
+              );
     
         }
     })
