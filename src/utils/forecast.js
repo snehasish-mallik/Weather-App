@@ -22,7 +22,7 @@ const forecast= (place, callback)=>{
                   " degrees. It feels like " +
                   response.body.current.feelslike_c +
                   " degrees. There is " +
-                  response.body.current.precip_mm +
+                  response.body.current.precip_mm * 10 +
                   "% chance of rain. The Sky is: " +
                   response.body.current.condition.text +
                   "."
